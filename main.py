@@ -8,12 +8,10 @@ def baitap1():
     n = int(input("Nhập n : "))
     print(n, "x 3 + 1 = ", n * 3 + 1)
 
-
 def baitap2():
     print("Đề bài: Nhập vào số n, hãy mũ 2 rồi chia cho 3, sau đó in kết quả ra màn hình\n")
     n = int(input("Nhập n : "))
     print(n, "^ 2 / 3 = ", n**2 / 3)
-
 
 def baitap3():
     print("Đề bài: Nhập vào nhiệt độ c, in ra nhiệt độ F\n")
