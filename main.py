@@ -141,9 +141,25 @@ def baitap15():
 def baitap16():
     print("Đề bài: Từ bài số 15, nếu a, b, c cấu tạo thành được một tam giác, kiểm tra xem đó là tam giác gì (tam giác đều, tam giác vuông cân, tam giác vuông, tam giác cân hay tam giác thường)")
     print("Running...")
-
-
-
+    print("Nếu nhập số âm chương trình sẽ tự động lấy trị tuyệt đối của số đó")
+    a = int(input("Nhập cạnh a : "))
+    b = int(input("Nhập cạnh b : "))
+    c = int(input("Nhập cạnh c : "))
+    a = abs(a)
+    b = abs(b)
+    c = abs(c)
+    if a + b > c and a - b < c and b - a  < c and a != 0 and b!= 0 and c != 0:
+        if a == b or b == c or a == c:
+            print("Đây là tam giác cân")
+        elif a == b == c:
+            print("Đây là tam giác đều")
+        elif a**2 == b**2 + c**2 or b**2 == a**2 + c**2 or c**2 == a**2 + b**2:
+            if a == b or a == c or b == c:
+                print("Đây là tam giác vuông cân")
+            else:
+                print("Đây là tam giác vuông")
+        print("Đây là tam giác thường")
+    
 if run == 1:
     baitap1()
 elif run == 2:
