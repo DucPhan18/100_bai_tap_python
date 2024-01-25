@@ -126,6 +126,21 @@ def baitap14():
 def baitap15():
     print("Đề bài: Nhập vào 3 số thực dương a, b, c. Kiểm tra xem a, b, c có cấu thành độ dài của 1 tam giác được không")
     print("Running...")
+    print("Nếu nhập số âm chương trình sẽ tự động lấy trị tuyệt đối của số đó")
+    a = int(input("Nhập cạnh a : "))
+    b = int(input("Nhập cạnh b : "))
+    c = int(input("Nhập cạnh c : "))
+    a = abs(a)
+    b = abs(b)
+    c = abs(c)
+    if a + b > c and a - b < c and b - a  < c and a != 0 and b!= 0 and c != 0:
+        print("Ba cạnh a, b, c đã nhập có thể cấu thành độ dài 1 tam giác")
+    else:
+        print("Ba cạnh a, b, c đã nhập không thể cấu thành độ dài 1 tam giác")
+
+def baitap16():
+    print("Đề bài: Từ bài số 15, nếu a, b, c cấu tạo thành được một tam giác, kiểm tra xem đó là tam giác gì (tam giác đều, tam giác vuông cân, tam giác vuông, tam giác cân hay tam giác thường)")
+    print("Running...")
 
 
 
@@ -159,3 +174,5 @@ elif run == 14:
     baitap14()
 elif run == 15:
     baitap15()
+elif run == 16:
+    baitap16()
