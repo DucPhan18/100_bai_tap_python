@@ -1,8 +1,7 @@
 import math
 
 print("Link đề: https://hocpython.org/100baitap/")
-print("Chon bài tập để chạy (1-100): ")
-run = int(input("Chọn bài : "))
+run = int(input("Chọn bài (1-100) : "))
 
 def baitap1():
     print(
@@ -148,17 +147,22 @@ def baitap16():
     a = abs(a)
     b = abs(b)
     c = abs(c)
-    if a + b > c and a - b < c and b - a  < c and a != 0 and b!= 0 and c != 0:
-        if a == b or b == c or a == c:
+    def tamgiac():
+        if a**2 == b**2 + c**2 or b**2 == a**2 + c**2 or c**2 == a**2 + b**2:
+            if a == b or a == c or b == c:
+                print("Đây là tam giác vuông cân") #!!!
+            else:
+                print("Đây là tam giác vuông")
+        elif a == b or b == c or a == c:
             print("Đây là tam giác cân")
         elif a == b == c:
             print("Đây là tam giác đều")
-        elif a**2 == b**2 + c**2 or b**2 == a**2 + c**2 or c**2 == a**2 + b**2:
-            if a == b or a == c or b == c:
-                print("Đây là tam giác vuông cân")
-            else:
-                print("Đây là tam giác vuông")
-        print("Đây là tam giác thường")
+        else:
+            print("Đây là tam giác thường")
+    if a + b > c and a - b < c and b - a  < c and a != 0 and b!= 0 and c != 0:
+        tamgiac()
+    else:
+        print("Đây không phải là hệ số 3 cạnh của 1 tam giác")
     
 if run == 1:
     baitap1()
