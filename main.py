@@ -139,7 +139,83 @@ def baitap16():
             print("Đây là tam giác thường")
     else:
         print("Đây không phải là hệ số 3 cạnh của 1 tam giác")
-    
+   
+def baitap17():
+    print("Đề bài: Nhập vào 3 số a, b, c. Hãy sắp xếp 3 số a, b, c theo thứ tự tăng dần rồi in ra lại\n")
+    a = float(input("Nhập số a: "))
+    b = float(input("Nhập số b: "))
+    c = float(input("Nhập số c: "))
+    if a > b:
+        a,b = b,a
+    if a > c:
+        a,c = c,a
+    if b > c:
+        b,c = c,b
+    print(a,b,c)
+
+def baitap18():
+    print("Đề bài: Giải và biện luận phương trình ax + b = 0\n")
+    a = float(input("Nhập số a: "))
+    b = float(input("Nhập số b: "))
+    if a != 0 :
+        print("Phương trình có 1 nghiệm duy nhất:")
+        print(" x =", -b/a)
+    if a == 0:
+        if b != 0:
+            print("Phương trình vô nghiệm")
+        if b == 0:
+            print("Phương trình đúng với mọi x") 
+
+def baitap19():
+    print("Đề bài: Giải và biện luận phương trình ax^2 + bx + c = 0\n")
+    print("ax^2 + bx + c = 0")
+    a = float(input("Nhập số a: "))
+    b = float(input("Nhập số b: "))
+    c = float(input("Nhập số c: "))
+    print("")
+    denta = b**2-4*a*c
+    if denta > 0:
+        can_denta = math.sqrt(denta)
+        print("Phương trình có 2 nghiệm phân biệt: ")
+        print(" x1 =", (-b+can_denta)/4*a)
+        print(" x2 =", (-b-can_denta)/4+a)
+    elif denta == 0:
+        print("Phương trình có nghiệm kép: ")
+        print(" x =", -b/2*a)
+    else:
+        print("Phương trình vô nghiệm")
+def baitap20():
+    print("Đề bài: Nhập tháng, năm. Hãy cho biết tháng đó có bao nhiêu ngày\n")
+    le = [1,3,5,7,8,10,12]
+    chan = [4,6,9,11]
+    check = []
+    thang = int(input("Nhập tháng: "))
+    nam = int(input("Nhập năm: "))
+    tach = list(str(nam))
+    if thang in le:
+        print("Tháng",thang,"có 31 ngày")
+    elif thang in chan:
+        print("Tháng",thang,"có 30 ngày")
+    if thang == 2:
+        if tach[2] and tach[3] != 0:
+            check.append(tach[0])
+            check.append(tach[1])
+            check = ''.join(check)
+            check = int(check)
+            del tach[0]
+            del tach[0]
+            tach = ''.join(tach)
+            tach = int(tach)
+            if check % 4 == 0:
+                print("Tháng 2 có 29 ngày")
+            else:
+                print("Tháng 2 có 28 ngày")
+        else:
+            if nam % 400 == 0:
+                print("Tháng 2 có 29 ngày")
+            else:
+                print("Tháng 2 có 28 ngày")
+
 if run == 1:
     baitap1()
 elif run == 2:
@@ -172,3 +248,11 @@ elif run == 15:
     baitap15()
 elif run == 16:
     baitap16()
+elif run == 17:
+    baitap17()
+elif run == 18:
+    baitap18()
+elif run == 19:
+    baitap19()
+elif run == 20:
+    baitap20()
