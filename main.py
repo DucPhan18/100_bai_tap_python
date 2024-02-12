@@ -268,6 +268,12 @@ def baitap20():
                 print("Tháng 2 có 28 ngày")
 
 
+def baitap21():
+    print(
+        "Đề bài: Nhập vào ngày, tháng. Hãy tính và in ra xem ngày nhập vào cách ngày đầu năm bao nhiêu ngày (giả sư năm đó không phải là năm nhuận)\n"
+    )
+
+
 if run == 1:
     baitap1()
 elif run == 2:
@@ -308,3 +314,5 @@ elif run == 19:
     baitap19()
 elif run == 20:
     baitap20()
+elif run == 21:
+    baitap21()
